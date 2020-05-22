@@ -1,4 +1,6 @@
-from board import Board,NotValidMoveException
+from board import Board, NotValidMoveException
+
+
 def main():
     board = Board()
     while not board.check()[0]:
@@ -6,7 +8,7 @@ def main():
             print('Make a move: ')
             board.make_move('x')
             print()
-        except (ValueError,NotValidMoveException) as e:
+        except (ValueError, NotValidMoveException) as e:
             print(e)
             print('That was not a valid move.')
             continue
@@ -19,4 +21,6 @@ def main():
             print('Computer have won!')
             return board.check()[1]
 
-main()
+
+if __name__ == "__main__":
+    main()
